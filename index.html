@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>cl upload</title>
+    <link rel="stylesheet" href="dist/css/main.css">
+</head>
+<body>
+
+<div class="container-fuild">
+    <div class="container">
+        <form id="clform" method="post" action="post.php" enctype="multipart/form-data" class="form-horizontal">
+            <div id="image_content" class="clupload"></div>
+        </form>
+    </div>
+</div>
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="dist/js/app.js"></script>
+<script>
+    $(document).ready(function () {
+        var myUp = $('#image_content').clupload({
+            width : 450,
+            height : 600,
+            thumbRatio : 2,
+            background : '#fff',
+            quality : 100,
+            file : {
+                max : 6,
+                maxSize : 1021, // kb
+            },
+            name: $('#imgName'),
+            imageUpload : {
+                url: 'php/upload.php',
+                exData: {id:21,module:'cv'}
+            },
+            success: function(form) {
+                var formData = new FormData($(form)[0]);
+                $.ajax({
+                    url: form.attr('action'),
+                    type: 'POST',
+                    data: formData,
+                    dataType: 'html',
+                    cache: false,
+                    processData: false,
+                    contentType: false
+                })
+                    .done(function(data) {
+                        alert(data);
+                    })
+                    .fail(function() {
+                        console.log("error");
+                    })
+                    .always(function() {
+                        console.log("complete");
+                    });
+            },
+            error: function(data) {
+                alert(data);
+                console.log(data);
+            }
+        });
+    })
+</script>
+</body>
+</html>
