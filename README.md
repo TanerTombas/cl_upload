@@ -1,8 +1,6 @@
 # CL UPLOAD
 This jQuery plugin was developed to save time in image uploads, cut and optimized high-dimensional images.
 
-**IMPORTANT: Not ready yet using for production.**
-
 ## Getting Started
 
 ### Contributing
@@ -22,7 +20,11 @@ npm run dev
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
 
 ---------------------
+### Installation
 
+```bash
+npm install clupload
+```
 ### Usage
 
 First Step : install jquery library
