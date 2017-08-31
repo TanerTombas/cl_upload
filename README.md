@@ -11,15 +11,6 @@ npm install
 npm run dev
 ```
 
-## Author
-
-* **Taner Tombas** - [Taner Tombas](https://github.com/TanerTombas) - [@tanertombass](https://twitter.com/tanertombass)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
----------------------
 ### Installation
 
 ```bash
@@ -33,14 +24,14 @@ First Step : install jquery library
 ```
 Second step : install clupload plugin
 ```
-<script type='text/javascript' src="path/js/jquery.clupload.min.js"></script>
+<script type='text/javascript' src="path/clupload/js/app.js"></script>
 ```
 Third step : install clupload style documents
 ```
-<link rel="stylesheet" type="text/css" href="path/css/clupload.css">
+<link rel="stylesheet" type="text/css" href="path/clupload/css/main.css">
 ```
 
-select your image upload container :
+#### Simple Use :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -58,7 +49,8 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
-Only image upload example :
+
+#### Only image upload use :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -77,7 +69,7 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
-Form upload example :
+#### Form upload use :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -116,3 +108,11 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
+
+## Author
+
+* **Taner Tombas** - [Taner Tombas](https://github.com/TanerTombas) - [@tanertmbs](https://twitter.com/tanertombs)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
