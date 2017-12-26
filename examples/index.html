@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>CL Upload</title>
+	<meta charset="utf8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/css/jquery.clupload.min.css">
+</head>
+<body>
+<div class="container">
+<h1>CL Upload</h1>
+<div class="well">
+<form id="clform" method="post" action="php/finish.php" enctype="multipart/form-data" class="form-horizontal">
+
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<a href="javascript:;" id="f-serialize" class="btn btn-default">Serialize</a>
+			<a href="javascript:;" id="f-send" class="btn btn-default">Send Ajax</a>
+			<a href="javascript:;" id="f-set-background" class="btn btn-default">Set Background (Red)</a>
+			<a href="javascript:;" id="f-stop" class="btn btn-default">Stop</a>
+			<a href="javascript:;" id="f-reset" class="btn btn-default">Reset</a>
+			<br/><br/>
+		</div>
+		<div class="col-sm-offset-2 col-sm-10">
+			<div id="image_content" class="clupload"></div>
+		</div>
+	</div>		
+	<div class="form-group">
+		<div class="col-sm-offset-2 col-sm-10">
+			<button type="submit" class="btn btn-primary">Send</button>
+		</div>
+	</div>
+</form>
+	<div class="prev" style="display:none;">
+	</div>
+</div>
+</div>
+<script type="text/javascript" src="../dist/js/jquery.min.js"></script>
+<script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.clupload.min.js"></script>
+<script type="text/javascript">
+var myUp = $('#image_content').clupload({
+	width : 450,
+	height : 600,
+	thumbRatio : 2,
+	background : '#fff',
+	quality : 100,
+	file : {
+		max : 6,
+		maxSize : 1021, // kb
+	},
+	name: $('#imgName'),
+	imageUpload : {
+		url: 'php/upload.php',
+		exData: {id:21,module:'cv'}
+	},
+	success: function(form) {
+		var formData = new FormData($(form)[0]);
+
+		$.ajax({
+			url: form.attr('action'),
+			type: 'POST',
+			data: formData,
+			dataType: 'html',
+			cache: false,
+			processData: false,
+			contentType: false		
+		})
+		.done(function(data) {
+			//alert(data);
+			$('.prev').html(data).show();
+
+		})
+		.fail(function() {
+			console.log("error");
+		})
+		.always(function() {
+			console.log("complete");
+		});
+	},
+	error: function(data) {
+		alert(data);
+		console.log(data);
+	}
+});
+
+$('#f-serialize').click(function(event) {
+	myUp.serialize(function(data) {
+		console.log(data);
+	});
+});
+
+$('#f-stop').click(function(event) {
+	myUp.stop(function(data) {
+		alert('Stopped');
+	});
+});
+
+$('#f-get-status').click(function(event) {
+	alert(myUp.status);
+});
+
+$('#f-reset').click(function(event) {
+	myUp.reset();
+});
+
+$('#f-set-background').click(function(event) {
+	myUp.options.background = 'red';
+	alert('Bundan sonra yükleneceklerin arkaplanı artık kırmızı!');
+});
+
+$('#f-send').click(function(event) {
+	myUp.send({
+		url: '../upload.php',
+		type: 'POST',
+		dataType: 'html',
+		data: form.serialize(),
+	})
+	.done(function(data) {
+		alert(data);
+	})
+	.fail(function() {
+		console.log("error");
+	})
+	.always(function() {
+		console.log("complete");
+	});
+});
+
+</script>
+
+</body>
+</html>

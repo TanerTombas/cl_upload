@@ -1,5 +1,5 @@
 # CL UPLOAD
-This jQuery plugin was developed to save time in image uploads, cut and optimized high-dimensional images.
+>This jQuery plugin was developed to save time in image uploads, cut and optimized high-dimensional images.
 
 ## Getting Started
 
@@ -11,11 +11,16 @@ npm install
 npm run dev
 ```
 
-### Installation
+## Authors
 
-```bash
-npm install clupload
-```
+* **Taner Tombas** - [Taner Tombas](https://github.com/taner-in-code) - [@tanertombass](https://twitter.com/tanertmbs)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+---------------------
+
 ### Usage
 
 First Step : install jquery library
@@ -24,14 +29,20 @@ First Step : install jquery library
 ```
 Second step : install clupload plugin
 ```
-<script type='text/javascript' src="path/clupload/js/app.js"></script>
+<script type='text/javascript' src="path/js/jquery.clupload.min.js"></script>
 ```
 Third step : install clupload style documents
 ```
-<link rel="stylesheet" type="text/css" href="path/clupload/css/main.css">
+<link rel="stylesheet" type="text/css" href="path/css/clupload.css">
 ```
-
-#### Simple Use :
+Add Your Image Content
+```
+<form action="" method="post" enctype="multipart/form-data">
+    <div id="form_clupload" class="clupload"></div>
+    <button type="submit" class="btn btn-primary pull-right" style="margin-top: 10px;">Complate</button>
+</form>
+```
+select your image upload container :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -49,8 +60,7 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
-
-#### Only image upload use :
+Only image upload example :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -69,7 +79,7 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
-#### Form upload use :
+Form upload example :
 ```
 <script type='text/javascript'>
 var myUp = $('#form_clupload').clupload({
@@ -108,11 +118,4 @@ var myUp = $('#form_clupload').clupload({
 });
 </script>
 ```
-
-## Author
-
-* **Taner Tombas** - [Taner Tombas](https://github.com/TanerTombas) - [@tanertmbs](https://twitter.com/tanertombs)
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+## Look at examples folder
