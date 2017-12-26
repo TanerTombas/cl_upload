@@ -25,15 +25,15 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 First Step : install jquery library
 ```
-<script type='text/javascript' src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script type='text/javascript' src="./dist/js/jquery.min.js"></script>
 ```
 Second step : install clupload plugin
 ```
-<script type='text/javascript' src="path/js/jquery.clupload.min.js"></script>
+<script type='text/javascript' src="./dist/js/jquery.clupload.min.js"></script>
 ```
 Third step : install clupload style documents
 ```
-<link rel="stylesheet" type="text/css" href="path/css/clupload.css">
+<link rel="stylesheet" type="text/css" href="./dist/css/jquery.clupload.min.css">
 ```
 Add Your Image Content
 ```
