@@ -6,7 +6,7 @@
 ### Contributing
 
 ```bash
-git clone git@github.com:TanerTombas/clupload.git && cd clupload
+git clone git@github.com:taner-in-code/clupload.git && cd clupload
 npm install
 npm run dev
 ```
