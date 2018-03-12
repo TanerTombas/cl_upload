@@ -1,4 +1,4 @@
-# CL UPLOAD
+# BWRS UPLOAD
 >This jQuery plugin was developed to save time in image uploads, cut and optimized high-dimensional images.
 
 ## Getting Started
@@ -27,11 +27,11 @@ First Step : install jquery library
 ```
 <script type='text/javascript' src="./dist/js/jquery.min.js"></script>
 ```
-Second step : install clupload plugin
+Second step : install BWRS UPLOAD plugin
 ```
 <script type='text/javascript' src="./dist/js/jquery.clupload.min.js"></script>
 ```
-Third step : install clupload style documents
+Third step : install BWRS UPLOAD style documents
 ```
 <link rel="stylesheet" type="text/css" href="./dist/css/jquery.clupload.min.css">
 ```
