@@ -5,7 +5,7 @@
 	<meta charset="utf8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="stylesheet" type="text/css" href="../dist/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="../dist/css/jquery.clupload.min.css">
+	<link rel="stylesheet" type="text/css" href="../dist/css/jquery.brws-upload.min.css">
 </head>
 <body>
 <div class="container">
@@ -23,9 +23,9 @@
 			<br/><br/>
 		</div>
 		<div class="col-sm-offset-2 col-sm-10">
-			<div id="image_content" class="clupload"></div>
+			<div id="image_content" class="bwrsUpload"></div>
 		</div>
-	</div>		
+	</div>
 	<div class="form-group">
 		<div class="col-sm-offset-2 col-sm-10">
 			<button type="submit" class="btn btn-primary">Send</button>
@@ -38,9 +38,9 @@
 </div>
 <script type="text/javascript" src="../dist/js/jquery.min.js"></script>
 <script type="text/javascript" src="../dist/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="../dist/js/jquery.clupload.min.js"></script>
+<script type="text/javascript" src="../dist/js/jquery.brws-upload.min.js"></script>
 <script type="text/javascript">
-var myUp = $('#image_content').clupload({
+var myUp = $('#image_content').brwsUpload({
 	width : 450,
 	height : 600,
 	thumbRatio : 2,
@@ -65,7 +65,7 @@ var myUp = $('#image_content').clupload({
 			dataType: 'html',
 			cache: false,
 			processData: false,
-			contentType: false		
+			contentType: false
 		})
 		.done(function(data) {
 			//alert(data);

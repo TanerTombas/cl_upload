@@ -12,7 +12,7 @@
 
 
 
-clupload_lang_en = {
+bwrsUpload_lang_en = {
 
 	upload_info : 'Uploaded Images (Drag Or Click Here)',
 
@@ -36,7 +36,7 @@ clupload_lang_en = {
 
 
 
-clupload_lang_tr = {
+bwrsUpload_lang_tr = {
 
 	upload_info : 'Fotoğraf Yüklemek İçin Buraya Tıklayın veya Fotoğraf Buraya Bırakın',
 
@@ -62,7 +62,7 @@ clupload_lang_tr = {
 
 
 
-$.fn.clupload = function(func) {
+$.fn.bwrsUpload = function(func) {
 
 	var content = this;
 
@@ -92,9 +92,9 @@ $.fn.clupload = function(func) {
 
     this.initialize = function() {
 
-    	content.text = window['clupload_lang_'+content.options.language];
+    	content.text = window['bwrsUpload_lang_'+content.options.language];
 
-		$(this).addClass('clupload').append('<input type="file" name="file[]" id="clfile" class="hidden" class="clfile" multiple/><a href="javascript:;" id="cl-info">'+content.text.upload_info+'<span class="cl-stats"></span></a><div class="cl-info-inside hidden"></div><canvas style="display:none; background:#fff" id="dcanvas"></canvas><figure style="display:none" id="gl_0"><div class="cl-top-wrapper"><div class="cl-top" style="width:'+Math.round(content.options.width/content.options.thumbRatio)+'px; height: '+Math.round(content.options.height/content.options.thumbRatio)+'px;"><img src=""></div></div><div class="cl-bottom"><div class="cl-file-name"></div><div class="cl-file-size"></div><div class="cl-remove"></div><div class="cl-fit"></div></div></figure>');
+		$(this).addClass('bwrsUpload').append('<input type="file" name="file[]" id="clfile" class="hidden" class="clfile" multiple/><a href="javascript:;" id="cl-info">'+content.text.upload_info+'<span class="cl-stats"></span></a><div class="cl-info-inside hidden"></div><canvas style="display:none; background:#fff" id="dcanvas"></canvas><figure style="display:none" id="gl_0"><div class="cl-top-wrapper"><div class="cl-top" style="width:'+Math.round(content.options.width/content.options.thumbRatio)+'px; height: '+Math.round(content.options.height/content.options.thumbRatio)+'px;"><img src=""></div></div><div class="cl-bottom"><div class="cl-file-name"></div><div class="cl-file-size"></div><div class="cl-remove"></div><div class="cl-fit"></div></div></figure>');
 
     	content.options.target = content.find('#clfile');
 
@@ -118,11 +118,11 @@ $.fn.clupload = function(func) {
 
 		/* DRAG AND DROP HTML5 */
 
-		content[0].ondragover = function () { 
+		content[0].ondragover = function () {
 
 			$(this).addClass('hover');
 
-			return false; 
+			return false;
 
 		}
 
@@ -130,9 +130,9 @@ $.fn.clupload = function(func) {
 
 		content[0].ondragleave = function () {
 
-			$(this).removeClass('hover'); 
+			$(this).removeClass('hover');
 
-			return false; 
+			return false;
 
 		}
 
@@ -140,7 +140,7 @@ $.fn.clupload = function(func) {
 
 		content[0].ondrop = function (event) {
 
-			$(this).removeClass('hover'); 
+			$(this).removeClass('hover');
 
 			event.preventDefault();
 
@@ -148,7 +148,7 @@ $.fn.clupload = function(func) {
 
 				addPhotoLoop(event.dataTransfer.files);
 
-			}			
+			}
 
 		}
 
@@ -348,7 +348,7 @@ $.fn.clupload = function(func) {
 
 				dragUpdate();
 
-			});	
+			});
 
 		} else { // fit height
 
@@ -398,7 +398,7 @@ $.fn.clupload = function(func) {
 
 					width: '100%',
 
-					height: '100%',					
+					height: '100%',
 
 					cursor: 'default',
 
@@ -406,7 +406,7 @@ $.fn.clupload = function(func) {
 
 				dragUpdate();
 
-			});	
+			});
 
 		}
 
@@ -450,15 +450,15 @@ $.fn.clupload = function(func) {
 
 			context.fillRect(0,0,canvas.width,canvas.height);
 
-			context.drawImage(img,arg.x1,arg.y1,arg.x2,arg.y2,arg.cx,arg.cy,arg.width,arg.height);	
+			context.drawImage(img,arg.x1,arg.y1,arg.x2,arg.y2,arg.cx,arg.cy,arg.width,arg.height);
 
 
 
-			var data = canvas.toDataURL('image/jpeg',content.options.quality/100);	
+			var data = canvas.toDataURL('image/jpeg',content.options.quality/100);
 
 			callback(data);
 
-		}			
+		}
 
 	}
 
@@ -520,7 +520,7 @@ $.fn.clupload = function(func) {
 
 			if (val.type == 'image/jpeg' || val.type == 'image/png' || val.type == 'image/bmp' || val.type == 'image/gif') {
 
-				totalSize = content.totalSize+val.size;			
+				totalSize = content.totalSize+val.size;
 
 			} else {
 
@@ -660,7 +660,7 @@ $.fn.clupload = function(func) {
 
 						var canvas = content.canvas;
 
-						var context = canvas.getContext('2d');						
+						var context = canvas.getContext('2d');
 
 
 
@@ -676,7 +676,7 @@ $.fn.clupload = function(func) {
 
 
 
-						switch(orientation){  
+						switch(orientation){
 
 							case 5:
 
@@ -726,11 +726,11 @@ $.fn.clupload = function(func) {
 
 						context.drawImage(current_image,0,0,twidth,theight);
 
-						var data = canvas.toDataURL('image/jpeg',content.options.quality/100);	
+						var data = canvas.toDataURL('image/jpeg',content.options.quality/100);
 
 						current_image = new Image();
 
-						current_image.src = data;								
+						current_image.src = data;
 
 						current_image.onload = function () {
 
@@ -762,9 +762,9 @@ $.fn.clupload = function(func) {
 
 						context.fillStyle = content.options.background;
 
-						context.fillRect(0,0,newWidth,newHeight);	
+						context.fillRect(0,0,newWidth,newHeight);
 
-						
+
 
 						var ratio = content.options.width/content.options.height;
 
@@ -772,7 +772,7 @@ $.fn.clupload = function(func) {
 
 
 
-						var exDiff = content.options.thumbRatio*2;	
+						var exDiff = content.options.thumbRatio*2;
 
 
 
@@ -828,7 +828,7 @@ $.fn.clupload = function(func) {
 
 							var startY = 0;
 
-							var endY = theight;		 
+							var endY = theight;
 
 
 
@@ -856,7 +856,7 @@ $.fn.clupload = function(func) {
 
 						context.fillStyle = content.options.background;
 
-						context.fillRect(0,0,newWidth,newHeight);	
+						context.fillRect(0,0,newWidth,newHeight);
 
 
 
@@ -870,7 +870,7 @@ $.fn.clupload = function(func) {
 
 						finimg = new Image();
 
-						finimg.src = dataUrl;		    			
+						finimg.src = dataUrl;
 
 						finimg.onload = function () {
 
@@ -1010,7 +1010,7 @@ $.fn.clupload = function(func) {
 
 						context.fillStyle = content.options.background;
 
-						context.fillRect(0,0,newWidth,newHeight);	
+						context.fillRect(0,0,newWidth,newHeight);
 
 
 
@@ -1020,7 +1020,7 @@ $.fn.clupload = function(func) {
 
 
 
-						var exDiff = content.options.thumbRatio*2;	
+						var exDiff = content.options.thumbRatio*2;
 
 
 
@@ -1076,7 +1076,7 @@ $.fn.clupload = function(func) {
 
 							var startY = 0;
 
-							var endY = theight;		 
+							var endY = theight;
 
 
 
@@ -1104,7 +1104,7 @@ $.fn.clupload = function(func) {
 
 						context.fillStyle = content.options.background;
 
-						context.fillRect(0,0,newWidth,newHeight);	
+						context.fillRect(0,0,newWidth,newHeight);
 
 
 
@@ -1154,7 +1154,7 @@ $.fn.clupload = function(func) {
 
 						finimg = new Image();
 
-						finimg.src = dataUrl;		    			
+						finimg.src = dataUrl;
 
 						finimg.onload = function () {
 
@@ -1370,15 +1370,15 @@ $.fn.clupload = function(func) {
 
 
 
-		var uImgLeft = thisImg.css('left').split("px")[0]; 
+		var uImgLeft = thisImg.css('left').split("px")[0];
 
-		var uImgLeft = Math.abs(uImgLeft*uRadius); 
+		var uImgLeft = Math.abs(uImgLeft*uRadius);
 
 
 
-		var uImgTop = thisImg.css('top').split("px")[0]; 
+		var uImgTop = thisImg.css('top').split("px")[0];
 
-		var uImgTop = Math.abs(uImgTop*uRadius); 
+		var uImgTop = Math.abs(uImgTop*uRadius);
 
 
 
@@ -1398,7 +1398,7 @@ $.fn.clupload = function(func) {
 
 			uContext.drawImage(uImg,uImgLeft,uImgTop,content.options.width,content.options.height,0,0,content.options.width,content.options.height);
 
-			var SdataUrl = uCanvas.toDataURL('image/jpeg', content.options.quality/100);	
+			var SdataUrl = uCanvas.toDataURL('image/jpeg', content.options.quality/100);
 
 			thisFig.find('.cl-top').attr('data-newsize',getSizeBase64(SdataUrl));
 
@@ -1428,7 +1428,7 @@ $.fn.clupload = function(func) {
 
 
 
-	function clSendAjax (id) {  
+	function clSendAjax (id) {
 
 
 
@@ -1438,7 +1438,7 @@ $.fn.clupload = function(func) {
 
 		var thisImg = thisFig.find('img');
 
-		var name = thisFig.find('.cl-top').attr('data-name');		
+		var name = thisFig.find('.cl-top').attr('data-name');
 
 		var src = thisImg.attr('src');
 
@@ -1450,15 +1450,15 @@ $.fn.clupload = function(func) {
 
 
 
-		var uImgLeft = thisImg.css('left').split("px")[0]; 
+		var uImgLeft = thisImg.css('left').split("px")[0];
 
-		var uImgLeft = Math.abs(uImgLeft*uRadius); 
+		var uImgLeft = Math.abs(uImgLeft*uRadius);
 
 
 
-		var uImgTop = thisImg.css('top').split("px")[0]; 
+		var uImgTop = thisImg.css('top').split("px")[0];
 
-		var uImgTop = Math.abs(uImgTop*uRadius); 
+		var uImgTop = Math.abs(uImgTop*uRadius);
 
 
 
@@ -1478,7 +1478,7 @@ $.fn.clupload = function(func) {
 
 			uContext.drawImage(uImg,uImgLeft,uImgTop,content.options.width,content.options.height,0,0,content.options.width,content.options.height);
 
-			var UdataUrl = uCanvas.toDataURL('image/jpeg', content.options.quality/100);	
+			var UdataUrl = uCanvas.toDataURL('image/jpeg', content.options.quality/100);
 
 
 
@@ -1518,7 +1518,7 @@ $.fn.clupload = function(func) {
 
 				data: {src:UdataUrl,name:name,exdata: content.options.imageUpload.exData},
 
-				success: function(data){ 
+				success: function(data){
 
 					console.log(data);
 
@@ -1534,7 +1534,7 @@ $.fn.clupload = function(func) {
 
 				},
 
-				error: function(){ 
+				error: function(){
 
 					if (window.clTry > 5) {
 
@@ -1546,13 +1546,13 @@ $.fn.clupload = function(func) {
 
 						clSendAjax(id);
 
-						window.clTry = window.clTry+1;				
+						window.clTry = window.clTry+1;
 
 					}
 
 				}
 
-			});			
+			});
 
 		}
 
@@ -1784,4 +1784,3 @@ $.fn.clupload = function(func) {
 	}
 
 };
-

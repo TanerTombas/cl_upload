@@ -1,19 +1,36 @@
 {
-  "name": "clupload",
-  "version": "1.0.2",
-  "description": "jquery image upload plugin",
-  "main": "./dist/js/jquery.clupload.min.js",
-  "scripts": {
-    "ci": "grunt ci",
-    "test": "grunt test"
+  "_from": "brws-upload",
+  "_inBundle": false,
+  "_integrity": "sha512-VheJAolyiklcN4PretLps9KkBahNN2/v423EqGC061Fn0kEILEd3RaFncul0NkQqzF90UCkrZ+aGfzddWbX8dA==",
+  "_location": "/brws-upload",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "brws-upload",
+    "name": "brws-upload",
+    "escapedName": "brws-upload",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
   },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/clupload/-/clupload-1.0.2.tgz",
+  "_shasum": "aef310ab5c31d7c5dad3473581b482275a4019be",
+  "_spec": "brws-upload",
+  "_where": "/Users/tanertombas/Code/PHP/myupload/clupload",
   "author": "Taner Tombaş <tombastaner@gmail.com> (http://tanertombas.com)",
-  "license": "ISC",
+  "bundleDependencies": false,
   "dependencies": {
     "bootstrap": "^3.3.7",
     "jquery": "^3.2.1",
     "jquery-mobile": "^1.5.0-alpha.1"
   },
+  "deprecated": false,
+  "description": "jquery image upload plugin",
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-autoprefixer": "^4.0.0",
@@ -25,5 +42,40 @@
     "gulp-ruby-sass": "^2.1.1",
     "gulp-sass": "^3.1.0",
     "gulp-uglify": "^3.0.0"
-  }
+  },
+  "license": "ISC",
+  "main": "./dist/js/jquery.bwrs-upload.min.js",
+  "name": "brws-upload",
+  "scripts": {
+    "ci": "grunt ci",
+    "test": "grunt test"
+  },
+  "version": "1.0.2",
+  "directories": {
+    "example": "examples"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/taner-in-code/imageupload.git"
+  },
+  "keywords": [
+    "image",
+    "upload",
+    "jquery",
+    "plugin",
+    "multiple",
+    "big",
+    "image",
+    "upload",
+    "plugin",
+    "jquery",
+    "image",
+    "upload",
+    "plugin",
+    "plugin"
+  ],
+  "bugs": {
+    "url": "https://github.com/taner-in-code/imageupload/issues"
+  },
+  "homepage": "https://github.com/taner-in-code/imageupload#readme"
 }
