@@ -2,7 +2,7 @@ $rgba_background : rgba(0,0,0,0.7);
 .hidden {
   display: none;
 }
-.bwrsUpload-wrapper {
+.brwsupload-wrapper {
   position: fixed;
   z-index: 99999;
   left: 0;
@@ -10,7 +10,7 @@ $rgba_background : rgba(0,0,0,0.7);
   width: 100%;
   height: 100%;
   background: $rgba_background;
-  .bwrsUpload-text {
+  .brwsupload-text {
       position: fixed; /* or absolute */
       background: #fff;
       padding: 15px;
@@ -22,7 +22,7 @@ $rgba_background : rgba(0,0,0,0.7);
       text-align: center;
   }
 }
-.bwrsUpload {
+.brwsupload {
   clear: both;
   overflow: hidden;
   position: relative;
