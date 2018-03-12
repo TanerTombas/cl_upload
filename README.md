@@ -1,4 +1,4 @@
-# BWRS UPLOAD
+# BRWS UPLOAD
 >This jQuery plugin was developed to save time in image uploads, cut and optimized high-dimensional images.
 
 ## Getting Started
