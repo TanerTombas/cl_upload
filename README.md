@@ -6,7 +6,7 @@
 ### Contributing
 
 ```bash
-git clone git@github.com:taner-in-code/clupload.git && cd clupload
+git clone git@github.com:taner-in-code/imageupload.git && cd imageupload
 npm install
 npm run dev
 ```
@@ -29,23 +29,23 @@ First Step : install jquery library
 ```
 Second step : install BWRS UPLOAD plugin
 ```
-<script type='text/javascript' src="./dist/js/jquery.clupload.min.js"></script>
+<script type='text/javascript' src="./dist/js/jquery.brws-upload.min.js"></script>
 ```
 Third step : install BWRS UPLOAD style documents
 ```
-<link rel="stylesheet" type="text/css" href="./dist/css/jquery.clupload.min.css">
+<link rel="stylesheet" type="text/css" href="./dist/css/jquery.brws-upload.min.css">
 ```
 Add Your Image Content
 ```
 <form action="" method="post" enctype="multipart/form-data">
-    <div id="form_clupload" class="clupload"></div>
+    <div id="form_clupload" class="brwsupload"></div>
     <button type="submit" class="btn btn-primary pull-right" style="margin-top: 10px;">Complate</button>
 </form>
 ```
 select your image upload container :
 ```
 <script type='text/javascript'>
-var myUp = $('#form_clupload').clupload({
+var myUp = $('#form_clupload').brwsupload({
     name: $('#imgName'),
     imageUpload : {
         url: 'your-upload-url-here',
@@ -63,7 +63,7 @@ var myUp = $('#form_clupload').clupload({
 Only image upload example :
 ```
 <script type='text/javascript'>
-var myUp = $('#form_clupload').clupload({
+var myUp = $('#form_brwsupload').brwsupload({
     name: $('#imgName'),
     imageUpload : {
         url: 'your-upload-url-here',
@@ -82,7 +82,7 @@ var myUp = $('#form_clupload').clupload({
 Form upload example :
 ```
 <script type='text/javascript'>
-var myUp = $('#form_clupload').clupload({
+var myUp = $('#form_brwsupload').brwsupload({
     name: $('#imgName'),
     imageUpload : {
         url: 'your-upload-url-here',
